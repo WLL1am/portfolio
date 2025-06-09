@@ -28,6 +28,9 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+    "globals": {
+      "__dirname": true
+}
     },
   },
 ]
