@@ -5,10 +5,10 @@ const projects = [
         id: 1,
         title: "Willow",
         description: "Modern Real Estate Marketplace using MERN stack",
-        image: "",
+        image: "../public/projects/project1.png",
         tags: ["React", "TailwindCSS"],
-        demoUrl: "#",
-        githubUrl: "#",
+        demoUrl: "https://mern-estate-9r9g.onrender.com/",
+        githubUrl: "https://github.com/WLL1am/mern-estate",
     },
     {
         id: 2,
@@ -94,7 +94,7 @@ export const ProjectsSection = () => {
                     <a 
                         className="cosmic-button w-fit flex items-center mx-auto gap-2" 
                         target="_blank"
-                        href="https://">
+                        href="https://github.com/WLL1am">
                         Check My GitHub <ArrowRight size={16} />
                     </a>
                 </div>
