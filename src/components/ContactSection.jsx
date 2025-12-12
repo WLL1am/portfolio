@@ -2,24 +2,33 @@ import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } fro
 import { cn } from "@/lib/utils"
 import { useToast } from "../hooks/use-toast"
 import { useState } from "react"
+import emailjs from 'emailjs-com'
 
 export const ContactSection = () => {
     const { toast } = useToast()
     const [ isSubmitting, setIsSubmitting ] = useState(false);
+    const [ formData, setFormData ] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
+    const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
+    const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
     const handleSubmit = (e) => {
         e.preventDefault()
 
         setIsSubmitting(true);
-
-        setTimeout(() => {
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, EMAILJS_PUBLIC_KEY).then((result) => {
             toast({
                 title: "Message sent!",
                 description: "Thank you for your message. I'll get back to you soon.",
             });
+            setFormData({ name: "", email: "", message: "" })
             setIsSubmitting(false)
-        }, 1500)
-
+        }).catch(() => alert("Oops! Something went wrong. Please try again."))
     }
 
     return (
@@ -48,8 +57,8 @@ export const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4> Email</h4>
-                                    <a href="mailto:williamchung2405@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                                        williamchung2405@gmail.com
+                                    <a href="mailto:williamchung@ucsb.edu" className="text-muted-foreground hover:text-primary transition-colors">
+                                        williamchung2405@ucsb.edu
                                     </a>
                                 </div>
                             </div>
@@ -60,7 +69,7 @@ export const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h4> Phone</h4>
-                                    <a href="tel:+11234567890" className="text-muted-foreground hover:text-primary transition-colors">
+                                    <a href="tel:+16262471248" className="text-muted-foreground hover:text-primary transition-colors">
                                         +1 (626) 247-1248
                                     </a>
                                 </div>
@@ -114,8 +123,10 @@ export const ContactSection = () => {
                                     id="name" 
                                     name="name" 
                                     required 
+                                    value={formData.name}
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                     placeholder="First Last..."
+                                    onChange={(e) => setFormData({...formData, name: e.target.value})}
                                 />
                             </div>
 
@@ -131,8 +142,10 @@ export const ContactSection = () => {
                                     id="email" 
                                     name="email" 
                                     required 
+                                    value={formData.email}
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                                     placeholder="firstlast@gmail.com"
+                                    onChange={(e) => setFormData({...formData, email: e.target.value})}
                                 />
                             </div>
 
@@ -147,8 +160,10 @@ export const ContactSection = () => {
                                     id="message" 
                                     name="message" 
                                     required 
+                                    value={formData.message}
                                     className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                                     placeholder="Hello, I'd like to talk about..."
+                                    onChange={(e) => setFormData({...formData, message: e.target.value})}
                                 />
                             </div>
 
