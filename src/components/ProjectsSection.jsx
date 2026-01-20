@@ -5,7 +5,7 @@ const projects = [
         id: 1,
         title: "Willow",
         description: "Modern Real Estate Marketplace using MERN stack",
-        image: "../public/projects/project1.png",
+        image: "/project1.png",
         tags: ["MongoDB", "Express", "React", "NodeJS", "JavaScript", "TailwindCSS"],
         demoUrl: "https://mern-estate-9r9g.onrender.com/",
         githubUrl: "https://github.com/WLL1am/mern-estate",
@@ -14,19 +14,28 @@ const projects = [
         id: 2,
         title: "Unity",
         description: "Banking / Personal Financing app",
-        image: "../public/projects/project2.png",
-        tags: ["React", "TypeScript", "TailwindCSS"],
+        image: "/project2.png",
+        tags: ["Appwrite", "Dwolla", "Plaid", "TypeScript", "Shadcn", "Sentry"],
         demoUrl: "https://bank-financing.vercel.app/",
-        githubUrl: "https://github.com/WLL1am/banking-app",
+        githubUrl: "https://github.com/wchungg/banking-app",
     },
     {
         id: 3,
         title: "GitHub+",
         description: "Upgraded GitHub Experience with AI Features",
-        image: "../public/projects/project3.png",
-        tags: ["React", "TailwindCSS"],
+        image: "/project3.png",
+        tags: ["NeonDB", "Prisma", "TypeScript", "tRPC", "Clerk", "Stripe"],
         demoUrl: "https://github-plus.vercel.app/",
-        githubUrl: "https://github.com/WLL1am/github-plus",
+        githubUrl: "https://github.com/wchungg/github-plus",
+    },
+    {
+        id: 4,
+        title: "AllStore",
+        description: "Storage Management and File Sharing Platform",
+        image: "/project4.png",
+        tags: ["React", "NextJS", "Appwrite", "TypeScript", "Shadcn"],
+        demoUrl: "https://allstore-files.vercel.app/",
+        githubUrl: "https://github.com/wchungg/files-storage-app",
     },
 ]
 
@@ -94,8 +103,8 @@ export const ProjectsSection = () => {
                     <a 
                         className="cosmic-button w-fit flex items-center mx-auto gap-2" 
                         target="_blank"
-                        href="https://github.com/WLL1am">
-                        Check My GitHub <ArrowRight size={16} />
+                        href="https://github.com/wchungg">
+                        Check out my GitHub <ArrowRight size={16} />
                     </a>
                 </div>
             </div>
