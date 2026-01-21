@@ -3,12 +3,12 @@ import { ArrowRight, ExternalLink, GithubIcon,  } from "lucide-react"
 const projects = [
     {
         id: 1,
-        title: "Willow",
-        description: "Modern Real Estate Marketplace using MERN stack",
-        image: "/project1.png",
-        tags: ["MongoDB", "Express", "React", "NodeJS", "JavaScript", "TailwindCSS"],
-        demoUrl: "https://mern-estate-9r9g.onrender.com/",
-        githubUrl: "https://github.com/WLL1am/mern-estate",
+        title: "AllStore",
+        description: "Storage Management and File Sharing Platform",
+        image: "/project4.png",
+        tags: ["React", "NextJS", "Appwrite", "TypeScript", "Shadcn"],
+        demoUrl: "https://allstore-files.vercel.app/",
+        githubUrl: "https://github.com/wchungg/files-storage-app",
     },
     {
         id: 2,
@@ -16,7 +16,7 @@ const projects = [
         description: "Banking / Personal Financing app",
         image: "/project2.png",
         tags: ["Appwrite", "Dwolla", "Plaid", "TypeScript", "Shadcn", "Sentry"],
-        demoUrl: "https://bank-financing.vercel.app/",
+        demoUrl: "https://unity-banking.vercel.app/",
         githubUrl: "https://github.com/wchungg/banking-app",
     },
     {
@@ -30,12 +30,12 @@ const projects = [
     },
     {
         id: 4,
-        title: "AllStore",
-        description: "Storage Management and File Sharing Platform",
-        image: "/project4.png",
-        tags: ["React", "NextJS", "Appwrite", "TypeScript", "Shadcn"],
-        demoUrl: "https://allstore-files.vercel.app/",
-        githubUrl: "https://github.com/wchungg/files-storage-app",
+        title: "Willow",
+        description: "Modern Real Estate Marketplace using MERN stack",
+        image: "/project1.png",
+        tags: ["MongoDB", "Express", "React", "NodeJS", "JavaScript", "TailwindCSS"],
+        demoUrl: "https://mern-estate-9r9g.onrender.com/",
+        githubUrl: "https://github.com/WLL1am/mern-estate",
     },
 ]
 

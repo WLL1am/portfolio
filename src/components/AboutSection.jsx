@@ -13,7 +13,7 @@ export const AboutSection = () => {
                         <h3 className="text-2xl font-semibold">Full-Stack Developer & Software Engineer</h3>
 
                         <p className="text-muted-foreground">
-                            I am a Computer Science student, specializing in modern web development. I build responsive, accessible, and high-performance applications designed to deliver seamless experiences across all devices.
+                            I am a Computer Science undergraduate student, specializing in engineering modern solutions. I build responsive, accessible, and high-performance applications designed to deliver seamless experiences across all devices.
                         </p>
 
                         <p className="text-muted-foreground">
